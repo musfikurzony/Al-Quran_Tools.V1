@@ -1,0 +1,117 @@
+/* style.css — Version-A (colorful morphology) */
+
+:root{
+  --bg:#0b1320;
+  --card:#071226;
+  --accent:#ffb86b;
+  --muted:#9fb6d9;
+  --text:#e6eef8;
+  --glass: rgba(255,255,255,0.03);
+  --pill:#0f2a3a;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Noto Sans Bengali", "Noto Sans", Arial, sans-serif;
+  background: linear-gradient(180deg,#071428 0%, #071022 100%);
+  color:var(--text);
+  min-height:100vh;
+  padding:18px;
+}
+
+/* toolbar */
+.toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+}
+.toolbar label{ color:var(--muted); margin-right:10px; font-size:14px; }
+.small-btn{ padding:6px 10px; border-radius:8px; background:#0ea5a3; border:0; color:#022; cursor:pointer; font-weight:700; }
+
+/* header */
+.surah-header{ margin-bottom:10px; }
+.surah-header h1{ margin:0; font-size:20px; color:var(--accent); }
+.surah-header .meta{ font-size:13px; color:var(--muted); margin-top:4px; }
+
+/* ayah card */
+.ayah{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+  padding:16px;
+  border-radius:12px;
+  margin-bottom:14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+.ayah-number{ color:var(--muted); font-size:13px; margin-bottom:8px; }
+
+/* Arabic */
+.arabic-line{ direction:rtl; text-align:right; font-size:28px; line-height:1.7; margin-bottom:10px; color:#dbefff; font-weight:700; letter-spacing:1px; }
+
+/* word row inline */
+.word-row{ margin-bottom:10px; }
+.word{
+  display:inline-block;
+  padding:6px 8px;
+  margin-right:8px;
+  border-radius:8px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+  cursor:pointer;
+  transition: transform .08s ease, background .12s ease;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+.word:hover{ transform:translateY(-3px); background: rgba(255,255,255,0.03); }
+
+/* translations */
+.translations{ margin-top:8px; color:var(--muted); font-size:15px; }
+.trans-osmani{ margin-bottom:6px; color:#f4f9ff; }
+.trans-tawzih{ color:#dbefff; }
+
+/* actions */
+.actions{ margin-top:12px; display:flex; justify-content:flex-end; }
+.action-btn{ padding:8px 12px; border-radius:10px; border:0; background:#1f6feb; color:white; cursor:pointer; }
+
+/* modal */
+.modal{ display:none; position:fixed; inset:0; z-index:9999; background: rgba(2,6,12,0.7); align-items:center; justify-content:center; padding:20px; }
+.modal .modal-content{ width:98%; max-width:960px; max-height:92vh; overflow:auto; background: linear-gradient(180deg,#071428,#02121a); padding:20px; border-radius:12px; border:1px solid rgba(255,255,255,0.04); color:var(--text); box-shadow: 0 18px 60px rgba(2,6,12,0.8); }
+.modal .close{ float:right; font-size:22px; cursor:pointer; color:var(--muted); }
+
+/* full grammar pre */
+.full-grammar-pre{
+  white-space:pre-wrap;
+  text-align:left;
+  font-size:16px;
+  line-height:1.9;
+  color: #e6eef8;
+}
+
+/* word modal specifics */
+.word-ar{ font-size:36px; direction:rtl; text-align:center; margin-bottom:8px; color:#8be3a8; }
+.word-bn{ font-size:16px; text-align:center; color:var(--text); margin-bottom:12px; }
+
+/* badges */
+.badge-row{ display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:12px; }
+.badge{ padding:8px 10px; border-radius:999px; background: linear-gradient(90deg,#052f3a,#0b5e63); color:#dff7f2; font-weight:700; border:1px solid rgba(255,255,255,0.04); }
+
+/* forms grid */
+.forms-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-bottom:12px; }
+.pill{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:12px; border-radius:10px; text-align:center; border:1px solid rgba(255,255,255,0.03); }
+.p-title{ color:var(--muted); font-size:13px; margin-bottom:6px; }
+.p-val{ color:var(--text); font-weight:800; font-size:16px; }
+
+/* grammar map */
+.gram-map .row{ display:flex; gap:12px; padding:8px 0; border-top:1px dashed rgba(255,255,255,0.02); align-items:flex-start; }
+.gram-key{ width:160px; color:#9fb6d9; font-weight:800; }
+.gram-val{ flex:1; color:var(--text); }
+
+/* small elements */
+.small { font-size:13px; color:var(--muted); }
+
+/* responsive */
+@media (max-width:520px){
+  .arabic-line{ font-size:22px; }
+  .word-ar{ font-size:28px; }
+  .gram-key{ width:110px; }
+}
