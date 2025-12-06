@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surah 101 - Grammar Tool</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="topbar">
+    <h2>সূরা ১০১ – আল-ক্বারিআ</h2>
+  </header>
+
+  <!-- Surah container -->
+  <div id="surahWrap" class="surah-wrap">
+    লোড হচ্ছে...
+  </div>
+
+  <!-- Full Grammar Modal -->
+  <div id="grammarModal" class="modal">
+    <div class="modal-content">
+      <span id="closeGrammar" class="close">&times;</span>
+      <h3 id="grammarTitle"></h3>
+      <div id="grammarBody"></div>
+    </div>
+  </div>
+
+  <!-- Word Info Modal -->
+  <div id="wordModal" class="modal">
+    <div class="modal-content">
+      <span id="closeWord" class="close">&times;</span>
+
+      <div class="word-ar" id="wordAr"></div>
+      <div class="word-bn" id="wordBn"></div>
+
+      <div id="morphBadges" class="badge-row"></div>
+      <div id="formsGrid" class="forms-grid"></div>
+      <div id="gramMap" class="gram-map"></div>
+    </div>
+  </div>
+
+    <!-- helper scripts -->
+  <script src="storage.js"></script>
+  <script src="sujas.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
